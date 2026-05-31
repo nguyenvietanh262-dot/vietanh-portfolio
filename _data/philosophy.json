@@ -1,0 +1,11 @@
+{
+  "cards": [
+    { "icon": "⊞", "title": "Tư duy Hệ thống", "desc": "Thiết lập SOPs minh bạch, chuẩn hóa KPI, và quản lý ngân sách khắt khe. Hệ thống hóa không phải để gò bó, mà để giải phóng con người khỏi áp lực hành chính." },
+    { "icon": "◯", "title": "Tinh thần Zen", "desc": "Lắng nghe, thấu cảm và kiến tạo môi trường làm việc \"chữa lành\". Một tổ chức vững mạnh được xây dựng từ sự kết nối giữa quy trình tinh gọn và lòng trắc ẩn của người lãnh đạo." }
+  ],
+  "roi": [
+    { "label": "ROI 01", "title": "Cost Optimization", "desc": "Tinh gọn thao tác thừa (Muda) + Quy trình mua sắm chặt chẽ 3–5 báo giá" },
+    { "label": "ROI 02", "title": "Quality Assurance", "desc": "Chuẩn hóa chất lượng dịch vụ cao cấp F&B/Resort + Setup mô hình chuẩn" },
+    { "label": "ROI 03", "title": "Staff Retention", "desc": "Môi trường làm việc thấu cảm + AI Mentoring giảm chi phí tuyển dụng lại" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "title": "Thiết lập & Chiến lược", "desc": "Cố vấn mô hình kinh doanh; Giám sát thi công từ giai đoạn đầu; Xây dựng chiến lược sản phẩm; Thiết kế hệ thống vận hành (SOPs)." },
+    { "title": "Vận hành Thường nhật", "desc": "Quản lý dự án tổng thể; Đàm phán nhà cung cấp (báo giá 3–5 nguồn); Quản lý cơ sở vật chất; Đảm bảo chất lượng dịch vụ F&B, lưu trú." },
+    { "title": "Marketing & Ngân sách", "desc": "Lập kế hoạch Marketing tổng thể; Sáng tạo nội dung quảng bá dự án; Định giá dịch vụ; Kiểm soát & tối ưu hóa chi phí." },
+    { "title": "Nhân sự & Văn hóa", "desc": "Tuyển dụng & đào tạo vị trí then chốt; Xây dựng KPI/lương thưởng; Thiết lập văn hóa doanh nghiệp minh bạch." }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "p1": "ZenWork là triết lý quản trị tôi đã đúc kết qua hơn 6 năm thực chiến — từ startup đến tập đoàn, từ F&B đến bất động sản cao cấp.",
+  "p2": "Thay vì áp đặt kỷ luật từ trên xuống, ZenWork đặt con người làm trung tâm: hệ thống sinh ra để phục vụ con người, không phải ngược lại.",
+  "p3": "Kết quả là một tổ chức vừa tinh gọn về quy trình, vừa nhân văn trong văn hóa — tạo ra lợi thế cạnh tranh bền vững mà không thể sao chép.",
+  "quote": "\"Sự tĩnh tại trong vận hành tạo ra lợi thế cạnh tranh dài hạn. Hệ thống tinh gọn + Văn hóa Care & Share = Tăng trưởng bền vững.\"",
+  "cite": "— Nguyễn Việt Anh, ZenWork Philosophy",
+  "pillars": [
+    { "num": "01", "title": "Hệ thống Tinh gọn", "desc": "SOPs được thiết kế tối giản, loại bỏ thao tác thừa (Muda theo Lean), quy trình mua sắm 3–5 nguồn, KPI minh bạch." },
+    { "num": "02", "title": "Care & Share Engine", "desc": "Vòng lặp bất tận giữa Quan tâm → Kaizen → Chia sẻ. Ghi nhận nỗ lực thầm lặng, thúc đẩy cộng tác đa chiều, lan tỏa tri thức." },
+    { "num": "03", "title": "AI Mentoring & Minh bạch", "desc": "Ứng dụng AI vào quản trị nội bộ: đánh giá hiệu suất dựa trên dữ liệu thực, mentoring cá nhân hóa, và dashboard minh bạch cho mọi cấp." }
+  ]
+}

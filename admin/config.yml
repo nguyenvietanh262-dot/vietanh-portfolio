@@ -1,0 +1,150 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Cho phép chỉnh sửa trực tiếp không cần pull request
+publish_mode: simple
+
+# Thư mục chứa ảnh upload (tùy chọn)
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Ngôn ngữ hiển thị
+locale: "vi"
+
+collections:
+  # ── THÔNG TIN CÁ NHÂN ──
+  - name: "profile"
+    label: "👤 Thông tin cá nhân"
+    files:
+      - name: "hero"
+        label: "Hero & Giới thiệu"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Tên hiển thị", name: "name", widget: "string", default: "Nguyễn Việt Anh" }
+          - { label: "Chức danh", name: "title", widget: "string", default: "Operation Manager" }
+          - { label: "Tagline (câu khẩu hiệu)", name: "tagline", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+
+      - name: "about"
+        label: "Về tôi & Thống kê"
+        file: "_data/about.json"
+        fields:
+          - { label: "Bio (đoạn giới thiệu)", name: "bio", widget: "text" }
+          - { label: "Triết lý cá nhân", name: "philosophy", widget: "string", hint: "Ví dụ: số hóa lòng tốt" }
+          - label: "Thống kê"
+            name: "stats"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - { label: "Giá trị (vd: 6+)", name: "value", widget: "string" }
+              - { label: "Nhãn (vd: Năm kinh nghiệm)", name: "label", widget: "string" }
+
+      - name: "contact"
+        label: "Thông tin liên hệ"
+        file: "_data/contact.json"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Số điện thoại", name: "phone", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Địa chỉ / Thành phố", name: "location", widget: "string" }
+          - { label: "Lời nhắn (Call to Action)", name: "cta", widget: "text" }
+
+  # ── NỘI DUNG SECTIONS ──
+  - name: "sections"
+    label: "📝 Nội dung trang"
+    files:
+      - name: "philosophy"
+        label: "Triết lý"
+        file: "_data/philosophy.json"
+        fields:
+          - label: "Cards triết lý"
+            name: "cards"
+            widget: "list"
+            max: 2
+            min: 2
+            fields:
+              - { label: "Icon / Symbol", name: "icon", widget: "string" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "desc", widget: "text" }
+          - label: "ROI Cards"
+            name: "roi"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - { label: "Label (vd: ROI 01)", name: "label", widget: "string" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "desc", widget: "text" }
+
+      - name: "zenwork"
+        label: "ZenWork Philosophy"
+        file: "_data/zenwork.json"
+        fields:
+          - { label: "Đoạn 1", name: "p1", widget: "text" }
+          - { label: "Đoạn 2", name: "p2", widget: "text" }
+          - { label: "Đoạn 3", name: "p3", widget: "text" }
+          - { label: "Câu quote nổi bật", name: "quote", widget: "text" }
+          - { label: "Tên tác giả quote", name: "cite", widget: "string" }
+          - label: "Ba trụ cột ZenWork"
+            name: "pillars"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - { label: "Số thứ tự (vd: 01)", name: "num", widget: "string" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "desc", widget: "text" }
+
+  # ── NGHỀ NGHIỆP ──
+  - name: "career"
+    label: "🗓 Lịch sử nghề nghiệp"
+    folder: "_data/career"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "role"
+    summary: "{{role}} — {{company}} ({{period}})"
+    sortable_fields: ["period", "role", "company"]
+    fields:
+      - { label: "Thời gian (vd: 07/2018 — 04/2020)", name: "period", widget: "string" }
+      - { label: "Chức danh / Vị trí", name: "role", widget: "string" }
+      - { label: "Tên công ty", name: "company", widget: "string" }
+      - { label: "Mô tả công việc", name: "desc", widget: "text" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Thứ tự hiển thị (số nhỏ = lên đầu)", name: "order", widget: "number", default: 99 }
+
+  # ── HỌC VẤN & CHỨNG CHỈ ──
+  - name: "credentials"
+    label: "🎓 Học vấn & Chứng chỉ"
+    folder: "_data/credentials"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    summary: "{{name}} ({{year}})"
+    fields:
+      - { label: "Năm / Hạng tốt nghiệp", name: "year", widget: "string" }
+      - { label: "Tên chứng chỉ / Bằng cấp", name: "name", widget: "string" }
+      - { label: "Mô tả", name: "desc", widget: "text" }
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 99 }
+
+  # ── NĂNG LỰC ──
+  - name: "competencies"
+    label: "⊞ Năng lực cốt lõi"
+    files:
+      - name: "competencies"
+        label: "Bốn trụ cột năng lực"
+        file: "_data/competencies.json"
+        fields:
+          - label: "Năng lực"
+            name: "items"
+            widget: "list"
+            max: 4
+            min: 4
+            fields:
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "desc", widget: "text" }
