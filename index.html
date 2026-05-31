@@ -1616,7 +1616,7 @@
     .guide-modal { padding: 36px 20px 28px; }
   }
 </style>
-</head>
+</head> <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <body>
 
 <!-- ── WELCOME POPUP ── -->
@@ -3461,5 +3461,15 @@
     document.getElementById('letterOverlay').classList.remove('open');
   }
 </script>
-</body>
+</body> <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </html>
